@@ -66,7 +66,7 @@ module.exports = (robot) ->
 
       emit = cmds.join "\n"
     else
-      emit = "#{process.env.HUBOT_SERVER}/"#{robot.name}"/help"
+      emit = "#{process.env.HUBOT_SERVER}/#{robot.name}/help"
 
     msg.send emit
 
