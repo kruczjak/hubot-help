@@ -64,7 +64,9 @@ module.exports = (robot) ->
         msg.send "No available commands match #{filter}"
         return
 
-    emit = cmds.join "\n"
+      emit = cmds.join "\n"
+    else
+      emit = "#{process.env.HUBOT_SERVER}/hubot/help"
 
     msg.send emit
 
